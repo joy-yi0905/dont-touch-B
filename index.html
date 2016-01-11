@@ -1,0 +1,41 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<title>dont-touch-B</title>
+<style>
+	html,body,ul,button{margin:0;padding:0;}
+	html,body{text-align: center;width:100%;height:100%;overflow:hidden;font-size:16px;}
+	.game{position: relative;max-width:640px;height:100%;margin:0 auto;-moz-user-select:none;}
+	.counter{position: absolute;left:0;top:0;width:100%;color:red;font-size:26px;}
+	.zz-list{position: absolute;left:0;top:0;width:100%;}
+	.zz-list li{float: left;width:25%;list-style:none;border-top:1px solid #ccc;border-bottom:1px solid #ccc;}
+	.zz-list li span{display:block;border-left:1px solid #ccc;border-right:1px solid #ccc;height:100%;font-size:1.2rem;}
+	.zz-list .blue{color:blue;}
+	.user-action{position: absolute;bottom:5px;z-index:1000;display:block;width:80px;height:30px;font-size:16px;}
+	.start-btn{left:50%;margin-left:-40px;}
+	.create-btn{right:10px;}
+	.role-select{left:10px;width:100px;}
+	.clear-btn{left:10px;width:40px;height:20px;line-height:20px;}
+</style>
+</head>
+
+<body>
+
+<div class="game" onselectstart="return false;">
+	<ul class="clearfix zz-list">
+	</ul>
+	<span class="counter"></span>
+	<select name="" id="" class="user-action role-select">
+		<option value="默认角色">默认角色</option>
+	</select>
+	<button class="user-action clear-btn" onclick= 'if(confirm("要清空所有记录吗？")){localStorage.clear();location.href = location.href;}' style="bottom:50px;">clear</button>
+	<button class="user-action start-btn">开始游戏</button>
+	<button class="user-action create-btn">创建角色</button>
+</div>
+
+</body>
+</html>
+
+<script type="text/javascript" src="js/dont-touch-B.js"></script>
