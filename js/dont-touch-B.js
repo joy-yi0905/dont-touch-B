@@ -156,6 +156,7 @@
         for(var i = 0 ; i < zz.length ; i++){
             zz[i].index = i;
             zz[i].addEventListener( "click" , function(){
+                alert(this.innerHTML)
                 if(isStart){
                     if(this.innerHTML === '<span class="blue">A</span>'){
                         var computeNum = this.index;
