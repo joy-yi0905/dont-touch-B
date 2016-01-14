@@ -53,12 +53,10 @@
         }
     }   
 
-
     // select role
-    roleSelect.onchange = function(){
+    roleSelect.addEventListener( "change" , function(){
         nowRoleName = roleSelect.options[roleSelect.selectedIndex].text;
-    }
-
+    } , false );
 
     startBtn.onclick = function(){
         clearInterval(counterTimer);
