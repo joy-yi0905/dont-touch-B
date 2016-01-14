@@ -58,7 +58,7 @@
         nowRoleName = roleSelect.options[roleSelect.selectedIndex].text;
     } , false );
 
-    startBtn.onclick = function(){
+    startBtn.addEventListener( "click" , function(){
         clearInterval(counterTimer);
         counterTimer = setInterval(function(){
             remainTime--;
@@ -76,12 +76,12 @@
         else{
             gameInit();
         }
-    }
+    } , false );
 
-
-    window.onresize = function(){
+    // change size
+    window.addEventListener( "resize" , function(){
         document.documentElement.style["font-size"] = 20 * (d.documentElement.clientWidth / 320) + "px";
-    }
+    } , false );
 
     document.documentElement.style["font-size"] = 20 * (screenW / 320) + "px";
 
@@ -155,7 +155,7 @@
         var zz = zzList.getElementsByTagName("li");
         for(var i = 0 ; i < zz.length ; i++){
             zz[i].index = i;
-            zz[i].onclick = function(){
+            zz[i].addEventListener( "click" , function(){
                 if(isStart){
                     if(this.innerHTML === '<span class="blue">A</span>'){
                         var computeNum = this.index;
@@ -175,7 +175,7 @@
                         gameOver();
                     }
                 }
-            }
+            } , false );
         }
     }
 
