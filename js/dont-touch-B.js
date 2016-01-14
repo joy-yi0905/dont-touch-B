@@ -155,8 +155,7 @@
         var zz = zzList.getElementsByTagName("li");
         for(var i = 0 ; i < zz.length ; i++){
             zz[i].index = i;
-            zz[i].addEventListener( "click" , function(){
-                alert(this.innerHTML)
+            zz[i].onclick = function(){
                 if(isStart){
                     if(this.innerHTML === '<span class="blue">A</span>'){
                         var computeNum = this.index;
@@ -176,7 +175,7 @@
                         gameOver();
                     }
                 }
-            } , false );
+            }
         }
     }
 
